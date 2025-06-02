@@ -23,3 +23,7 @@
     --paragraph: 500 1rem/1.25rem var(--ff-base);
     --link: 500 .85rem/1rem var(--ff-base);
 }
+main {
+    max-width: 75rem;
+    padding: 0 18.75rem;
+}
