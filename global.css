@@ -18,7 +18,7 @@
         /* Fontes */
     --ff-base: "Inter", sans-serif;
 
-    --title: 700 .75rem/1.5rem var(--ff-base);
+    --title: 700 24px/1.5rem var(--ff-base);
     --label: 600 1rem/1.25rem var(--ff-base);
     --paragraph: 500 1rem/1.25rem var(--ff-base);
     --link: 500 .85rem/1rem var(--ff-base);

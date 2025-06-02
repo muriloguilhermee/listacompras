@@ -7,3 +7,6 @@
 header {
     text-align: center;
 }
+h1 {
+    font: var(--title);
+}
