@@ -18,12 +18,20 @@
         /* Fontes */
     --ff-base: "Inter", sans-serif;
 
-    --title: 700 24px/1.5rem var(--ff-base);
-    --label: 600 1rem/1.25rem var(--ff-base);
+    --title: 600 1.5rem/1.5rem var(--ff-base);
+    --label: 300 1rem/1.25rem var(--ff-base);
     --paragraph: 500 1rem/1.25rem var(--ff-base);
     --link: 500 .85rem/1rem var(--ff-base);
 }
-main {
-    max-width: 75rem;
-    padding: 0 18.75rem;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section {
+    width: 627px;
+}
+h1 {
+    padding: 30px 0px 50px 0px;
 }

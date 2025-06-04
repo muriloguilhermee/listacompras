@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body { 
+    background-color: var(--background-primary);
+}
 
 header {
     text-align: center;
@@ -10,3 +13,90 @@ header {
 h1 {
     font: var(--title);
 }
+input {
+    width: 451px;
+    height: 44px;
+    padding: 20px;
+    border: 3px solid var(--border-primary);
+    border-radius: 8px;
+    font: var(--label);
+}
+.add-product button {
+    width: 160px;
+    height: 44px;
+    padding: 10px 5px;
+    font: var(--label);
+    color: var(--always-white);
+    background-color: var(--color-brand);
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 20px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--background-secondary);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.hidden-checkbox {
+    /* display: none; */
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    
+}
+.custom {
+    width: 20px;
+    height: 20px;
+    background-image: url(images/icons/state=Default.svg);
+    background-size: cover;
+    cursor: pointer;
+    transition: backgroud-image 0.3s ease;
+}
+.custom:hover {
+    background-image: url(images/icons/state=hover.svg);
+}
+.item input:checked + .custom{
+    background-image: url(images/icons/state=selected.svg);
+}
+.item input {
+    position: absolute;
+    opacity: 0;
+    width: 20;
+    height: 20;
+}
+.text {
+    padding-left: 10px;
+    font: var(--label);
+    color: var(--content-secondary);
+    
+}
+.delete-btn {
+    margin-left: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.deleting-product {
+    display: flex;
+    padding: 10px 5px;
+    font: var(--label);
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: var(--color-danger);
+}
+.deleting-product span {
+    color: var(--always-white);
+}
+.deleting-product button {
+    
+}
+.deleting-btn {
+    margin-left: auto;
+    border: none;
+    background-color: var(--color-danger);
+}
+

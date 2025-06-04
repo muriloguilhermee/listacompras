@@ -15,24 +15,25 @@
         <img src="images/logo.png" alt="Logo">
     </header>
     <main>
-      <div>
+      <section>
         <img src="images/icons/voltar.svg" alt="voltar">
         <h1>Compras da Semana</h1>
       </div>
-      <div id="add-product">
-        <input type="text" name="product" id="product" required>
-        <button type="submit"> Adicionar produto</button>
-      </div>
-      <div id="product-added">
-        <img src="images/icons/state=Default.svg" alt="status">
-        <span id="description">produto</span>
-        <img src="images/icons/trash.svg" alt="excluir">
-      </div>
-      <div>
+      <section class="add-product">
+        <input type="text" name="product" id="product" placeholder="Adicione um novo item" required>
+        <button type="submit"> Adicionar item</button>
+      </section>
+      <section class="item">
+          <input type="checkbox" class="hidden-checkbox">
+          <span class="custom"></span>
+          <span class="text">produto</span>
+          <button class="delete-btn"><img src="images/icons/trash.svg" alt="trash"></button>
+      </section>
+      <section class="deleting-product">
         <img src="images/icons/warning-circle-filled.svg" alt="alerta">
-        <span id="delete-product">O item foi removido da lista</span>
-        <img src="images/icons/delete.svg" alt="delete">
-      </div>
+        <span class="text">O item foi removido da lista</span>
+        <button class="deleting-btn"><img src="images/icons/delete.svg" alt="delete"></button>
+      </section>
     </main>    
 </body>
 </html>
