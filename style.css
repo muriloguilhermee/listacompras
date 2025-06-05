@@ -98,7 +98,7 @@ input:hover {
 }
 .deleting-product {
     display: flex;
-    padding: 10px 5px;
+    padding: 10px 15px;
     font: var(--label);
     border-radius: 12px;
     border: none;
