@@ -50,6 +50,9 @@ input:hover {
     cursor: pointer;
 }
 .item {
+    display: none;
+}
+.product-added {
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -117,4 +120,6 @@ input:hover {
     border: none;
     background-color: var(--color-danger);
 }
-
+.deleting {
+    display: none;
+}

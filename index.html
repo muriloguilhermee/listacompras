@@ -15,31 +15,32 @@
         <img src="images/logo.png" alt="Logo">
     </header>
     <main>
-      <section>
-        <button class="voltar"><img src="images/icons/voltar.svg" alt="voltar"></button>
-        <h1>Compras da Semana</h1>
-      </div>
-      <section class="add-product">
-        <input type="text" name="product" id="product" placeholder="Adicione um novo item" required>
-        <button type="submit"> Adicionar item</button>
-      </section>
-      <section class="item">
-          <input type="checkbox" class="hidden-checkbox">
-          <span class="custom"></span>
-          <span class="text">produto</span>
-          <button class="delete-btn"><img src="images/icons/trash.svg" alt="trash"></button>
-      </section>
-      <section class="item">
-          <input type="checkbox" class="hidden-checkbox">
-          <span class="custom"></span>
-          <span class="text">produto</span>
-          <button class="delete-btn"><img src="images/icons/trash.svg" alt="trash"></button>
-      </section>
-      <section class="deleting-product">
-        <img src="images/icons/warning-circle-filled.svg" alt="alerta">
-        <span class="text">O item foi removido da lista</span>
-        <button class="deleting-btn"><img src="images/icons/delete.svg" alt="delete"></button>
-      </section>
-    </main>    
+      <form>
+        <section>
+          <button class="voltar"><img src="images/icons/voltar.svg" alt="voltar"></button>
+          <h1>Compras da Semana</h1>
+        </div>
+        <section class="add-product">
+          <input type="text" name="product" id="product" placeholder="Adicione um novo item" required>
+          <button id="button" type="submit"> Adicionar item</button>
+        </section>
+        <section class="item">
+            <div class="product-added">
+              <input type="checkbox" class="hidden-checkbox">
+              <span class="custom"></span>
+              <span id="text" class="text">produto</span>
+              <button class="delete-btn"><img src="images/icons/trash.svg" alt="trash"></button>
+            </div>
+        </section>
+        <section class="deleting">
+          <div class="deleting-product">
+            <img src="images/icons/warning-circle-filled.svg" alt="alerta">
+            <span class="text">O item foi removido da lista</span>
+            <button class="deleting-btn"><img src="images/icons/delete.svg" alt="delete"></button>
+                  </section>
+          </div>
+            </main>
+      </form>
+    <script src="script.js"></script>
 </body>
 </html>
