@@ -6,7 +6,13 @@
 body { 
     background-color: var(--background-primary);
 }
-
+.voltar {
+    button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--background-primary);
+}
+}
 header {
     text-align: center;
 }
@@ -21,6 +27,16 @@ input {
     border-radius: 8px;
     font: var(--label);
 }
+input:hover {
+    border: 3px solid var(--border-hover);
+}
+.add-product input:focus{
+    outline: none;
+    border: 3px solid var(--color-brand);
+}
+.add-product input:focus::placeholder {
+    color: black;
+}
 .add-product button {
     width: 160px;
     height: 44px;
@@ -31,6 +47,7 @@ input {
     border-radius: 12px;
     border: none;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 .item {
     display: flex;
@@ -87,12 +104,13 @@ input {
     border: none;
     margin-bottom: 20px;
     background-color: var(--color-danger);
+    align-items: center;
 }
 .deleting-product span {
     color: var(--always-white);
 }
 .deleting-product button {
-    
+    cursor: pointer;
 }
 .deleting-btn {
     margin-left: auto;
