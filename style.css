@@ -163,46 +163,87 @@ input:hover {
 
 /* RESPONSIVO: Para telas pequenas (mobile) */
 @media (max-width: 480px) {
-    /* Input do produto vai ocupar 100% da largura do container com padding ajustado */
-    input#product {
-      width: 100%; /* largura total do container pai */
-      padding: 12px 15px; /* espaçamento confortável para toque */
-      font-size: 1rem; /* tamanho de fonte relativo ao root, para escala */
+    /* Container principal (main) com padding lateral e largura máxima da tela */
+    main {
+      max-width: 100%;
+      padding: 0 15px;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
   
-    /* Botão de adicionar item também vai ocupar toda largura e ganhar espaçamento acima */
+    /* Formulário de adicionar produto fica empilhado verticalmente */
+    .add-product {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* espaçamento entre input e botão */
+    }
+  
+    /* Input ocupa 100% da largura disponível dentro do container */
+    .add-product input#product {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      height: 44px; /* mantém altura consistente */
+      padding: 12px 15px; /* espaçamento interno confortável */
+    }
+  
+    /* Botão ocupa 100% da largura e tem altura adequada */
     .add-product button {
       width: 100%;
-      margin-top: 10px;
+      max-width: 100%;
+      height: 44px;
+      box-sizing: border-box;
       font-size: 1rem;
-      padding: 12px 0;
     }
   
-    /* Container do item adicionado vai empilhar verticalmente */
+    /* Cada item da lista fica vertical, com espaçamento */
     .product-added {
-      flex-direction: column; /* vertical */
-      align-items: flex-start; /* alinha conteúdo à esquerda */
-      gap: 8px; /* espaçamento entre elementos */
-      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      width: 100%;
+      box-sizing: border-box;
     }
   
-    /* Ajusta o checkbox customizado maior para toque mais fácil */
-    .custom {
-      width: 24px;
-      height: 24px;
-    }
-  
-    /* Texto do produto ganha margem para separar do checkbox */
+    /* Texto do produto com quebra de linha e padding adequado */
     .text {
       padding-left: 0;
-      margin-left: 8px;
       font-size: 1rem;
+      word-break: break-word;
+      color: var(--content-secondary);
     }
   
-    /* Botão de deletar vai para baixo, alinhado à direita */
+    /* Checkbox customizado fica menor e alinhado */
+    .hidden-checkbox {
+      width: 20px;
+      height: 20px;
+    }
+    
+    .custom {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  
+    /* Botão deletar fica alinhado no canto direito */
     .delete-btn {
       align-self: flex-end;
-      margin-top: 8px;
-      padding: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    /* Ajusta a imagem do header pra não ficar grande demais */
+    header img {
+      max-width: 120px;
+      height: auto;
+    }
+  
+    /* Footer de alerta com padding e largura correta */
+    footer.deleting {
+      padding: 10px 15px;
+      box-sizing: border-box;
+      width: 100%;
     }
   }
