@@ -163,36 +163,46 @@ input:hover {
 
 /* RESPONSIVO: Para telas pequenas (mobile) */
 @media (max-width: 480px) {
-    input {
-        width: 100%; /* Input ocupa toda largura disponível no mobile */
-        padding: 15px;
-        font-size: 16px;
+    /* Input do produto vai ocupar 100% da largura do container com padding ajustado */
+    input#product {
+      width: 100%; /* largura total do container pai */
+      padding: 12px 15px; /* espaçamento confortável para toque */
+      font-size: 1rem; /* tamanho de fonte relativo ao root, para escala */
     }
-
+  
+    /* Botão de adicionar item também vai ocupar toda largura e ganhar espaçamento acima */
     .add-product button {
-        width: 100%; /* Botão ocupa toda largura abaixo do input */
-        margin-top: 10px;
-        font-size: 16px;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 1rem;
+      padding: 12px 0;
     }
-
+  
+    /* Container do item adicionado vai empilhar verticalmente */
     .product-added {
-        flex-direction: column; /* Itens em coluna pra caber melhor */
-        align-items: flex-start;
+      flex-direction: column; /* vertical */
+      align-items: flex-start; /* alinha conteúdo à esquerda */
+      gap: 8px; /* espaçamento entre elementos */
+      padding: 12px;
     }
-
-    .delete-btn {
-        margin-left: 0;
-        margin-top: 10px;
-        align-self: flex-end; /* Botão vai para canto inferior direito */
-    }
-
+  
+    /* Ajusta o checkbox customizado maior para toque mais fácil */
     .custom {
-        width: 25px;
-        height: 25px;
+      width: 24px;
+      height: 24px;
     }
-
+  
+    /* Texto do produto ganha margem para separar do checkbox */
     .text {
-        padding-left: 0;
-        margin-top: 10px;
+      padding-left: 0;
+      margin-left: 8px;
+      font-size: 1rem;
     }
-}
+  
+    /* Botão de deletar vai para baixo, alinhado à direita */
+    .delete-btn {
+      align-self: flex-end;
+      margin-top: 8px;
+      padding: 6px;
+    }
+  }
