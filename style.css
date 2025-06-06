@@ -1,42 +1,60 @@
+/* Reseta margens, padding e configura box-sizing para facilitar layout */
 * { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Cor de fundo principal do body, provavelmente variável CSS definida no root */
 body { 
     background-color: var(--background-primary);
 }
+
+/* Estilização do botão voltar */
+/* Aqui tem um erro de sintaxe: não precisa do "button" dentro da classe voltar */
 .voltar {
-    button {
     cursor: pointer;
     border: none;
     background-color: var(--background-primary);
 }
-}
+
+/* Centraliza o conteúdo dentro do header */
 header {
     text-align: center;
 }
+
+/* Estilo do título principal (h1) */
 h1 {
     font: var(--title);
 }
+
+/* Estilo base para todos inputs */
 input {
-    width: 451px;
+    width: 451px; /* Largura fixa, ajustar no responsivo depois */
     height: 44px;
     padding: 20px;
     border: 3px solid var(--border-primary);
     border-radius: 8px;
     font: var(--label);
 }
+
+/* Efeito hover no input */
 input:hover {
     border: 3px solid var(--border-hover);
 }
+
+/* Estilo específico do input dentro da seção de adicionar produto */
 .add-product input:focus{
-    outline: none;
-    border: 3px solid var(--color-brand);
+    outline: none; /* Remove contorno padrão */
+    border: 3px solid var(--color-brand); /* Borda na cor da marca */
 }
+
+/* Placeholder fica preto quando o input está focado */
 .add-product input:focus::placeholder {
     color: black;
 }
+
+/* Botão de adicionar item, com cores, borda e arredondamento */
 .add-product button {
     width: 160px;
     height: 44px;
@@ -49,9 +67,13 @@ input:hover {
     margin-bottom: 20px;
     cursor: pointer;
 }
-.item {
+
+/* Classe para esconder a lista inicialmente */
+.hidden {
     display: none;
 }
+
+/* Container do produto adicionado: flex para alinhar checkbox, texto e botão */
 .product-added {
     display: flex;
     align-items: center;
@@ -60,45 +82,52 @@ input:hover {
     border-radius: 10px;
     margin: 20px 0;
 }
+
+/* Checkbox escondido - usamos opacity 0 e position absoluta para controlar visual pelo label */
 .hidden-checkbox {
-    /* display: none; */
-    cursor: pointer;
+    position: absolute; /* Para tirar do fluxo visual */
+    opacity: 0; /* Invisível */
     width: 20px;
     height: 20px;
-    
+    cursor: pointer;
 }
+
+/* Label customizada que substitui o checkbox visual, usando background images */
 .custom {
     width: 20px;
     height: 20px;
     background-image: url(images/icons/state=Default.svg);
     background-size: cover;
     cursor: pointer;
-    transition: backgroud-image 0.3s ease;
+    transition: background-image 0.3s ease; /* Transição suave ao mudar imagem */
 }
+
+/* Imagem muda no hover */
 .custom:hover {
     background-image: url(images/icons/state=hover.svg);
 }
-.item input:checked + .custom{
+
+/* Quando o checkbox está marcado, muda a imagem do label (checkbox custom) */
+.hidden-checkbox:checked + .custom {
     background-image: url(images/icons/state=selected.svg);
 }
-.item input {
-    position: absolute;
-    opacity: 0;
-    width: 20;
-    height: 20;
-}
+
+/* Texto do produto, com padding para separar do checkbox */
 .text {
     padding-left: 10px;
     font: var(--label);
     color: var(--content-secondary);
-    
 }
+
+/* Botão de deletar sem borda e fundo, com cursor pointer */
 .delete-btn {
-    margin-left: auto;
+    margin-left: auto; /* Empurra para a direita */
     border: none;
     background: none;
     cursor: pointer;
 }
+
+/* Estilo do footer de alerta quando remove um produto */
 .deleting-product {
     display: flex;
     padding: 10px 15px;
@@ -109,17 +138,61 @@ input:hover {
     background-color: var(--color-danger);
     align-items: center;
 }
+
+/* Texto do alerta, branco pra contrastar */
 .deleting-product span {
     color: var(--always-white);
 }
+
+/* Botão dentro do alerta com cursor pointer */
 .deleting-product button {
     cursor: pointer;
 }
+
+/* Botão de deletar no alerta */
 .deleting-btn {
-    margin-left: auto;
+    margin-left: auto; /* Vai pro canto direito */
     border: none;
     background-color: var(--color-danger);
 }
+
+/* Footer de alerta começa escondido */
 .deleting {
     display: none;
+}
+
+/* RESPONSIVO: Para telas pequenas (mobile) */
+@media (max-width: 480px) {
+    input {
+        width: 100%; /* Input ocupa toda largura disponível no mobile */
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .add-product button {
+        width: 100%; /* Botão ocupa toda largura abaixo do input */
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .product-added {
+        flex-direction: column; /* Itens em coluna pra caber melhor */
+        align-items: flex-start;
+    }
+
+    .delete-btn {
+        margin-left: 0;
+        margin-top: 10px;
+        align-self: flex-end; /* Botão vai para canto inferior direito */
+    }
+
+    .custom {
+        width: 25px;
+        height: 25px;
+    }
+
+    .text {
+        padding-left: 0;
+        margin-top: 10px;
+    }
 }
