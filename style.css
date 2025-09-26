@@ -162,7 +162,7 @@ input:hover {
 }
 
 /* RESPONSIVO: Para telas pequenas (mobile) */
-@media (max-width: 480px) {
+@media (max-width: 720px) {
     /* Container principal (main) com padding lateral e largura máxima da tela */
     main {
       max-width: 100%;

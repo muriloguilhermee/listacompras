@@ -8,7 +8,7 @@ const footerBtn = footer.querySelector(".deleting-btn"); // Pega o botão para f
 // Escuta a digitação no input do produto para permitir só letras e espaços
 product.addEventListener("input", function () {
   // Remove tudo que não for letras (incluindo letras acentuadas) e espaços
-  this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");
+  this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\s]/g, "");p
 });
 
 // Quando o formulário for enviado (botão adicionar clicado)
